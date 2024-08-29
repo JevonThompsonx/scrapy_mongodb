@@ -7,5 +7,4 @@ from pprint import pprint
 import httpx
 import scrapy
 
-pprint(dir(httpx))
-pprint(dir(scrapy))
+pprint(dir(scrapy.Request))
