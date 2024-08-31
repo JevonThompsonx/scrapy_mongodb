@@ -1,4 +1,4 @@
-# Scrapy settings for aur project
+# Scrapy settings for qoutes project
 #
 # For simplicity, this file contains only settings considered important or
 # commonly used. You can find more settings consulting the documentation:
@@ -7,14 +7,14 @@
 #     https://docs.scrapy.org/en/latest/topics/downloader-middleware.html
 #     https://docs.scrapy.org/en/latest/topics/spider-middleware.html
 
-BOT_NAME = "aur"
+BOT_NAME = "qoutes"
 
-SPIDER_MODULES = ["aur.spiders"]
-NEWSPIDER_MODULE = "aur.spiders"
+SPIDER_MODULES = ["qoutes.spiders"]
+NEWSPIDER_MODULE = "qoutes.spiders"
 
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
-#USER_AGENT = "aur (+http://www.yourdomain.com)"
+#USER_AGENT = "qoutes (+http://www.yourdomain.com)"
 
 # Obey robots.txt rules
 ROBOTSTXT_OBEY = True
@@ -45,13 +45,13 @@ ROBOTSTXT_OBEY = True
 # Enable or disable spider middlewares
 # See https://docs.scrapy.org/en/latest/topics/spider-middleware.html
 #SPIDER_MIDDLEWARES = {
-#    "aur.middlewares.AurSpiderMiddleware": 543,
+#    "qoutes.middlewares.QoutesSpiderMiddleware": 543,
 #}
 
 # Enable or disable downloader middlewares
 # See https://docs.scrapy.org/en/latest/topics/downloader-middleware.html
 #DOWNLOADER_MIDDLEWARES = {
-#    "aur.middlewares.AurDownloaderMiddleware": 543,
+#    "qoutes.middlewares.QoutesDownloaderMiddleware": 543,
 #}
 
 # Enable or disable extensions
@@ -63,7 +63,7 @@ ROBOTSTXT_OBEY = True
 # Configure item pipelines
 # See https://docs.scrapy.org/en/latest/topics/item-pipeline.html
 #ITEM_PIPELINES = {
-#    "aur.pipelines.AurPipeline": 300,
+#    "qoutes.pipelines.QoutesPipeline": 300,
 #}
 
 # Enable and configure the AutoThrottle extension (disabled by default)
