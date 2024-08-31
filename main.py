@@ -7,9 +7,8 @@ from pprint import pprint
 import httpx
 import scrapy
 from parsel import Selector
-
-response = httpx.get('https://archlinux.org/packages/?page=1&').text
+URL_START = 'https://quotes.toscrape.com'
+response = httpx.get(URL_START).text
 selector = Selector(text = response)
-packages = selector.css("#pkglist-results-form > table > tbody")
-for package in packages:
-    pprint(package.css('tbody > tr:nth-child(1) > td:nth-child(4)::text').get())
+qoutes = selector.css("body > div > div:nth-child(2) > div.col-md-8")
+pprint(qoutes.get())
