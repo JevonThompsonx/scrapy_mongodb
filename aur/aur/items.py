@@ -19,15 +19,15 @@ class AurPackage(scrapy.Item):
     maintainer:str #css selector
     lastUpdated:str #css selector
     """
-    # define the fields for your item here like:
-    # name = scrapy.Field()
+    # url = https://archlinux.org/packages/?page=1&
+    #base = #pkglist-results-form > table > tbody
+
+
     name = scrapy.Field()
-    # element.css('td:nth-child(1)> a::text')
+    #tr:nth-child(1) > td:nth-child(3) > a::text
     currentVersion = scrapy.Field()
-    #element.css('td:nth-child(2)::text')
+    #tr:nth-child(1) > td:nth-child(4) > a::text
     description = scrapy.Field()
-    #element.css('td:nth-child(5)::text')
-    maintainer = scrapy.Field()
-    #element.css('td:nth-child(6) > a::text')
+    #tr:nth-child(1) > td:nth-child(5)::text
     lastUpdated = scrapy.Field()
-    #element.css('td:nth-child(7)a::text')
+    #tr:nth-child(1) > td:nth-child(6)::text
