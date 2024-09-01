@@ -12,7 +12,7 @@ class QouteSpider(scrapy.Spider):
         
         see qoutes.items.py for more info on qoute model
         """
-        for qoute in response.css('body > div > div:nth-child(2) > div.col-md-8 > div.qoute'):
+        for qoute in response.css('body > div > div:nth-child(2) > div.col-md-8 > div.quote'):
             item = QoutesItem()
             item['qoute'] = qoute.css('span.text::text').get()
             item['author'] = qoute.css('span > small.text::text').get()
