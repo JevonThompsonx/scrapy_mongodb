@@ -7,6 +7,7 @@ import scrapy
 
 
 class QoutesItem(scrapy.Item):
-    # define the fields for your item here like:
-    # name = scrapy.Field()
-    pass
+   #url = https://quotes.toscrape.com
+    #base css selector = body > div > div:nth-child(2) > div.col-md-8 > div.qoute
+    author = scrapy.Field() # span.text::text
+    qoute = scrapy.Field() # span > small.author::text
