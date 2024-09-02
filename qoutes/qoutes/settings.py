@@ -1,4 +1,4 @@
-# Scrapy settings for qoutes project
+a# Scrapy settings for qoutes project
 #
 # For simplicity, this file contains only settings considered important or
 # commonly used. You can find more settings consulting the documentation:
@@ -17,7 +17,7 @@ NEWSPIDER_MODULE = "qoutes.spiders"
 
 
 LOG_LEVEL = "WARNING"
-LOG_FILE = "book_scraper.log"
+LOG_FILE = "quotes_scraper.log"
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
 #USER_AGENT = "qoutes (+http://www.yourdomain.com)"
