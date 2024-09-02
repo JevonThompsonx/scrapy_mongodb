@@ -29,6 +29,10 @@ class MongoPipeline:
 
     def close_spider(self, spider):
         self.client.close()
+    
+    def compute_item_id(self, item):
+        identifier = item["identifier"]
+        return hashlib.sha256(identifier.encode("utf-8")).hexdigest()
 
     def process_item(self, item, spider):
         item_id = self.compute_item_id(item)
@@ -38,7 +42,3 @@ class MongoPipeline:
             item["_id"] = item_id
             self.db[self.COLLECTION_NAME].insert_one(ItemAdapter(item).asdict())
             return item
-
-    def compute_item_id(self, item):
-        identifier = item["identifier"]
-        return hashlib.sha256(indentifier.encode("utf-8")).hexdigest()
