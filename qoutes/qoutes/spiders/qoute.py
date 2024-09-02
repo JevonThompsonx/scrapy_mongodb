@@ -18,7 +18,7 @@ class QouteSpider(scrapy.Spider):
             item['author'] = qoute.css('span > small.author::text').get()
             yield item
 
-        next_page = response.css("nav > ul > li > a").get()
+        next_page = response.css("nav > ul > li > a::attr(href)").get()
         if next_page:
             next_page_url = response.urljoin(next_page)
             yield scrapy.Request(url=next_page_url, callback=self.parse)
