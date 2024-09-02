@@ -6,12 +6,18 @@
 #     https://docs.scrapy.org/en/latest/topics/settings.html
 #     https://docs.scrapy.org/en/latest/topics/downloader-middleware.html
 #     https://docs.scrapy.org/en/latest/topics/spider-middleware.html
-
+import os
+from dotenv import load_dotenv
+load_dotenv()
+mongo_connect_string = os.getenv('mongo_connect_string')
 BOT_NAME = "qoutes"
 
 SPIDER_MODULES = ["qoutes.spiders"]
 NEWSPIDER_MODULE = "qoutes.spiders"
 
+
+LOG_LEVEL = "WARNING"
+LOG_FILE = "quotes_scraper.log"
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
 #USER_AGENT = "qoutes (+http://www.yourdomain.com)"
@@ -91,3 +97,10 @@ ROBOTSTXT_OBEY = True
 REQUEST_FINGERPRINTER_IMPLEMENTATION = "2.7"
 TWISTED_REACTOR = "twisted.internet.asyncioreactor.AsyncioSelectorReactor"
 FEED_EXPORT_ENCODING = "utf-8"
+# ...
+
+MONGO_URI = mongo_connect_string
+MONGO_DATABASE = "quotes_db"
+ITEM_PIPELINES = {
+    "qoutes.pipelines.MongoPipeline": 300,
+}
