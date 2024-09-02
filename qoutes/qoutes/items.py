@@ -28,3 +28,4 @@ class QoutesItem(scrapy.Item):
     author = scrapy.Field()
     qoute = scrapy.Field()
     url = scrapy.Field()
+    _id = scrapy.Field()
