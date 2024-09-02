@@ -40,5 +40,5 @@ class MongoPipeline:
             return item
 
     def compute_item_id(self, item):
-        url = item["url"]
-        return hashlib.sha256(url.encode("utf-8")).hexdigest()
+        identifier = item["identifier"]
+        return hashlib.sha256(indentifier.encode("utf-8")).hexdigest()
