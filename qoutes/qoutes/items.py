@@ -13,6 +13,7 @@ class QoutesItem(scrapy.Item):
     ---------
     author:str
     qoute:str
+    url:str
 
     urlTarget = https://quotes.toscrape.com
     base css selector = body > div > div:nth-child(2) > div.col-md-8 > div.qoute
@@ -26,3 +27,4 @@ class QoutesItem(scrapy.Item):
     """
     author = scrapy.Field()
     qoute = scrapy.Field()
+    url = scrapy.Field()
