@@ -16,6 +16,9 @@ SPIDER_MODULES = ["qoutes.spiders"]
 NEWSPIDER_MODULE = "qoutes.spiders"
 
 
+LOG_LEVEL = "WARNING"
+LOG_FILE = "book_scraper.log"
+
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
 #USER_AGENT = "qoutes (+http://www.yourdomain.com)"
 
