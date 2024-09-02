@@ -15,7 +15,7 @@ class QouteSpider(scrapy.Spider):
         for qoute in response.css('body > div > div:nth-child(2) > div.col-md-8 > div.quote'):
             item = QoutesItem()
             item['qoute'] = qoute.css('span.text::text').get()
-            item['url'] = response.url
+            item['identifier'] = response.css("span.text::text").get() + response.css("span>small.author::text").get()
             item['author'] = qoute.css('span > small.author::text').get()
             yield item
 
