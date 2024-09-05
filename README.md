@@ -28,7 +28,7 @@ This can be tested by cloning this repo:
 1. ``git clone https://github.com/JevonThompsonx/scrapy_mongodb.git``
 2. ``cd scrapy_mongod``
 3. ``pip install -r requirements.txt``
-5. create a **.env** file with "mongo_connect_string" ( I used mongo atlas)
+5. create a **.env** file with "mongo_connect_string" as the variable name for the connection string ( I used mongo atlas)
 6. activate the python virtual environment according to ur shell
     - bash/zsh: ``source venv/bin/activate``
     - fish: ``source /path/to/venv/bin/activate.fish``
