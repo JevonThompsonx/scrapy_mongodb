@@ -1,4 +1,4 @@
-anyio==4.4.0
+anyio==4.14.2
 attrs==24.2.0
 Automat==24.8.1
 certifi==2024.7.4
